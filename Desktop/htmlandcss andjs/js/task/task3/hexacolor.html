@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Auto Hex Color Generator</title>
+    <style>
+        body {
+            transition: background-color 1s ease;
+            font-family: sans-serif;
+            text-align: center;
+            margin-top: 100px;
+            color: #fff;
+        }
+
+        #colorCode {
+            font-size: 2rem;
+            margin-top: 20px;
+            font-weight: bold;
+            background-color: rgba(0, 0, 0, 0.4);
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>🌈 Auto Hex Color Generator</h1>
+    <p id="colorCode">#FFFFFF</p>
+
+    <script>
+        function getRandomHexColor() {
+            let hex= "#";
+            const chars = "0123456789abcdef";
+
+            for (let i = 0; i < 6; i++) {
+                hex += chars[Math.floor(Math.random() * 16)];
+            }
+
+            return hex;
+        }
+
+        function updateColor() {
+            const newColor = getRandomHexColor();
+            document.body.style.backgroundColor = newColor;
+            document.getElementById("colorCode").textContent = newColor;
+        }
+        setInterval(updateColor, 1000);
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form onsubmit="handle_submit(event)">
+        <input type="text" placeholder="name here" id="name" />
+        <input type="email" placeholder="email here" id="email" />
+        <input type="password" placeholder="password here" id="password"/> 
+        <button type="submit">signup</button>
+        <p>already have an account ?<a href="./login.html">login</a></p>
+        <script>
+            function handle_submit(e) {
+                e.preventDefault()
+                let signupName = document.getElementById("name").value.trim();
+                let signUpEmail = document.getElementById("email").value.trim();
+                let signupPassword = document.getElementById("password").value.trim();
+
+                let allUsers= JSON.parse(localStorage.getItem("allUsers")) || []
+                const existedUser = allUsers.find(x => x.email === signUpEmail)
+                if (existedUser) {
+                    return alert("already user exists with same email")
+                }
+                let newUser = {
+                    name:  signupName,
+                    email: signUpEmail,
+                    password:  signupPassword
+                }
+                // const allUsers = JSON.parse(localStorage.getItem("signUpDetails")) || []
+                // console.log(allUsers)
+                // allUsers.push(newUser)
+                // // const allUsers=JSON.parse(localStorage.getItem("SignUpDetails"))||[]
+                allUsers.push(newUser)
+                localStorage.setItem("allUsers", JSON.stringify(allUsers))
+                window.location.href="login.html"
+            }
+        </script>
+    </form>
+
+</body>
+
+</html> 
+
+

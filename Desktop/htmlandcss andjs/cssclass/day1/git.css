@@ -1,0 +1,19 @@
+
+h1{
+    background-color: red;
+    font-size: 20px;
+    border-radius: 40px;
+}
+
+.hello{
+    background-color: brown;
+    font-size: 20px;
+    font-style: italic;
+    border-radius: 40px;
+}
+#sai{
+    background-color:palevioletred;
+    font-size: 40px;
+    border-radius: 30px;
+
+}

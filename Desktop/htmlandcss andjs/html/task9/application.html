@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>application </title>
+</head>
+
+<body>
+    <center> <i>
+            <img src="./telangana transport.jpg" alt="photo" title="bus transport" width="70">
+            <h1>TELANGANA STATE ROAD TRANSPORT CORPORATION</h1>
+            <h2>GENERAL BUS PASS APPLICATION</h2>
+            
+        </i></center>
+    <form  action="./success.html" method="get">
+        <fieldset>
+            <legend>Application Details:</legend>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name"pattern="[a-z,A-Z]{20}+" title="please enter letter" required> &nbsp; &nbsp; &nbsp; &nbsp;
+            <label for="Father's/Guardian's Name">Father's/Guardian's Name:</label> &nbsp;
+            <input type="text" id="Father's/Guardian's Name"  name="father name" pattern="[a-z,A-Z]+"title="please fill the name" required><br><br>
+            <label for="date of birth">date of birth:</label>
+            <input type="datetime-local" id="date of birth" name="date"required>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;
+            <label for="gender">Gender:</label>
+            <input type="radio" name="gender" id="gender" value="Female">Female&nbsp; &nbsp; &nbsp; &nbsp;
+            <input type="radio" name="gender" id="gender" value="Male">Male &nbsp;<br><br>
+            <label>Age As no:</label>&emsp;&nbsp;
+            <input type="number" name="AgeAsNo" pattern="[0-9]{2}" min="15" max="25" title="Age should be b/w 15-25" >
+            <label for="whatsapp">Whatsapp No:</label>
+            <input type="text" name="whatsapp" id="whatsapp" pattern="[a-zA-Z0-9!#@$^%$]+{20}" required> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            <label for="email">E-mail id:</label>
+            <input type="email" id="email" name="email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required> &nbsp;<br><br><br>
+            <label for="photo"><b>Photo*:</b></label>
+           <input type="file" id="photo" name="photo"  title="upload photo" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Residental Address Details</legend>
+            <label for=" Address">Application Address:</label>&nbsp; &nbsp;
+            <textarea id="textarea" id="Address" pattern="[a-zA-Z0-9!#@$^%$]+" cols="3" rows="3" title="please valid address"required></textarea>&nbsp;&nbsp;
+            <label for="district">District:</label>
+            <select name="district" id="district">
+                <option value="HYDERABAD">HYDERABAD </option>
+            </select><br><br><br>
+            <label for="mandal">Mandal:</label>
+            <select name="mandal" id="mandal">
+                <option value="HYDERABAD">HYDERABAD </option>
+            </select>&nbsp;&nbsp;
+            <label for="Village">Village:</label>
+            <select name="village" id="Village">
+                <option value="HYDERABAD">HYDERABAD </option>
+                <option value="Andhra pradesh">Andhra pradesh</option>
+                <option value="kadapa">kadapa</option>
+            </select><br><br><br>
+            <label for="pin">Pin code:</label>
+            <input type="name" id="pin" pattern="[0-9]+" title="please enter a number" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Pass Type Details</legend>
+            <label for="city">city:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <select name="Hyderabad" id="city">
+                <option value="Hyderabad">Hyderabad</option>
+                <option value="andhrapradesh">andhra pradesh</option>
+                </select>&nbsp;&nbsp;
+            <label for="pass ">pass type:</label>&nbsp;&nbsp;&nbsp;
+            <select name="pass type" id="pass">
+                <option value="---select---">---select--- </option>
+                <option value="yes">yes</option>
+                <option value="no">No</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>mode of payment & pass collection</legend>
+            <label for="payment">payment mode:</label>
+            <select name="payment" id="payment">&nbsp;&nbsp;
+                <option value="payment mode">select payment mode</option>
+                <option value="online">online</option>
+                <option value ="offline">offline</option>
+            </select><br><br>
+            <label for="delivery">pass delivery mode:</label>
+            <select name="pass mode" id="delivery">&nbsp;&nbsp;
+                <option value="Delivery payment mode">pass payment mode</option>
+                <option value="completed">completed</option>
+                <option value="in completed">in completed</option>
+            </select><br><br>
+            <label for="collect pass">center at which you want to collect pass:</label>&nbsp;
+            <select name="collect pass" id="collect pass">
+                <option value="collect pass">----select----</option>
+            </select>
+        </fieldset><br><br>
+
+        <center><img src="./cap.jpg" width="500" required><br><br>
+            <input type="text" pattern="[XBVwRw]+" title="please enter the cap" required><br><br>
+
+         
+           <input type="submit" value="submit" ></center>
+        </form>
+    
+    
+</body>
+
+</html>

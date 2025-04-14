@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>VIBGYOR Animation</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: violet;
+      transition: background-color 1s ease;
+      font-family: sans-serif;
+    }
+
+    .box {
+      width: 200px;
+      height: 200px;
+      border-radius: 20px;
+      background-color: white;
+      box-shadow: 0 0 30px rgba(0,0,0,0.3);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<div class="box">VIBGYOR</div>
+
+<script>
+  const colors = [
+    "violet",   // V
+    "indigo",   // I
+    "blue",     // B
+    "green",    // G
+    "yellow",   // Y
+    "orange",   // O
+    "red"       // R
+  ];
+
+  let index = 0;
+
+  setInterval(() => {
+    document.body.style.backgroundColor = colors[index];
+    index = (index + 1) % colors.length;
+  }, 1000); // Change color every 1 second
+</script>
+
+</body>
+</html>

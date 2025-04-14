@@ -1,0 +1,406 @@
+/* body{
+    background-color: skyblue;
+} */
+ /* *{
+    margin: 0;
+    padding: 0;
+
+ } */
+#navbar{
+    background-color: lightblue;
+}
+@media(max-width:450px){
+    #navbar{
+        margin: 0;
+        padding: 0;
+     width: 100%;
+     display:flex;
+     justify-content: space-around;
+ 
+    }
+    #navbarlinks {
+     display: none;
+  align-items: center;
+     gap:30px ;
+     font-size: 22px;
+    }
+    #navbarlinks > a{
+     text-decoration: none;
+    }
+
+    #banner{
+        width: 100%;
+    }
+    #banner > img{
+        width: 100%;
+    } 
+    #banner > h4{
+        font-size: 23px;
+    }
+    #houses{
+     display: grid;
+     grid-template-columns: repeat(1,1fr);
+     gap: 20px;
+    }
+    #houses > #house{
+     width: 100%;
+     position: relative;
+    }
+    #house > img{
+     width: 100%;
+     border-radius: 5px;
+    }
+    #house > span{
+     position: absolute;
+     left: 0;
+     top:0;
+     background-color: black;
+     color: white;
+     padding: 2px 10px;
+     border-radius: 5px;
+     font-size: 22px;
+    }
+    #about_image{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 20px;
+        padding: 5px 10px;
+       }
+        #images{
+    
+        width: 100%;
+    }
+       #images>img{
+        width: 100%;
+        border-radius: 9px;
+       }
+       #images> span{
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        background-color:rgb(193, 176, 230);
+        padding: 10px 0px;
+       }
+       #about_image > #image>span:hover{
+        background-color: aqua;
+       }
+       
+   #contactdetails > input{
+    display: block;
+    width: 100%;
+    padding: 5px 0px;
+    margin-top: 20px ;
+    margin-bottom: 10px;
+    line-height: 1.2rem;
+   }
+   #contactdetails>span{
+    background-color:#0e0e0f;
+    color: white;
+    padding: 5px 7px;
+   }
+   #map{
+    width: 100%;
+    padding: 5px 1px;
+   }
+   #map>img{
+    margin-top: 20px;
+    width: 100%;
+   }
+   #footer{
+    padding: 5px 10px;
+    background-color: #0e0e0f;
+    text-align: center;
+    color: white;
+}
+#pos{
+    position:relative;
+    bottom: 145rem;
+    left:28rem;
+    font-size: 35px;
+}
+ 
+ }
+@media(min-width : 451px) and (max-width:750px){
+
+    #navbar{
+     width: 100%;
+     margin: 0px;
+     padding: 0px;
+     display:flex;
+     justify-content: space-around;
+ 
+    }
+    #navbarlinks {
+     display: flex;
+  align-items: center;
+     gap:20px ;
+     font-size: 15px;
+    }
+    #navbarlinks > a{
+     text-decoration: none;
+    }
+
+    #banner{
+        width: 100%;
+    }
+    #banner > img{
+        width: 100%;
+    }
+    #banner > h4{
+        font-size: 20px;
+    }
+    #houses{
+     display: grid;
+     grid-template-columns: repeat(2,1fr);
+     gap: 20px;
+    }
+    #houses > #house{
+     width: 100%;
+     position: relative;
+    }
+    #house > img{
+     width: 100%;
+     border-radius: 5px;
+    }
+    #house > span{
+     position: absolute;
+     left: 0;
+     top:0;
+     background-color: black;
+     color: white;
+     padding: 2px 10px;
+     border-radius: 5px;
+     font-size: 18px;
+    }
+    #about_image{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 20px;
+        padding: 5px 10px;
+       }
+        #images{
+    
+        width: 100%;
+    }
+       #images>img{
+        width: 100%;
+        border-radius: 9px;
+       }
+       #images> span{
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        background-color:rgb(193, 176, 230);
+        padding: 10px 0px;
+       }
+       #about_image > #images >span:hover{
+        background-color: aqua;
+       }
+       
+   #contactdetails > input{
+    display: block;
+    width: 100%;
+    padding: 5px 0px;
+    margin-top: 20px ;
+    margin-bottom: 10px;
+    line-height: 1.2rem;
+   }
+   #contactdetails>span{
+    background-color:#0e0e0f;
+    color: white;
+    padding: 5px 7px;
+   }
+   #map{
+    width: 100%;
+    padding: 5px 1px;
+   }
+   #map>img{
+    margin-top: 20px;
+    width: 100%;
+   }
+   #footer{
+    padding: 5px 10px;
+    background-color: #0e0e0f;
+    text-align: center;
+    color: white;
+}
+#pos{
+    position:relative;
+    bottom: 145rem;
+    left:28rem;
+    font-size: 35px;
+}
+
+ 
+ } 
+
+@media(min-width : 750px) and (max-width:1024px),(min-width:1024px){
+   
+   #navbar{
+    position: fixed;
+     top: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display:flex;
+    justify-content: space-around;
+    z-index: 1;
+    background-color: lightblue;
+
+   }
+   #navbarlinks {
+    display: flex;
+ align-items: center;
+    gap:30px ;
+    font-size: 22px;
+   }
+   #navbarlinks > a{
+    text-decoration: none;
+   }
+#banner{
+    width: 100%;
+}
+#banner > img{
+    width: 100%;
+}
+   #banner > h4{
+    font-size: 20px;
+}
+   #houses{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+   }
+   #houses > #house{
+    width: 100%;
+    position: relative;
+   }
+   /* #houses>#house{
+    width: 100%;
+   } */
+   #house > img{
+    width: 100%;
+    border-radius: 5px;
+   }
+   #house > span{
+    position: absolute;
+    left: 0;
+    top:0;
+    background-color: black;
+    color: white;
+    padding: 2px 10px;
+    border-radius: 5px;
+   }
+   #about_image{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+    padding: 5px 10px;
+   }
+    #images{
+
+    width: 100%;
+}
+   #images>img{
+    width: 100%;
+    border-radius: 9px;
+   }
+   #images> span{
+    display: block;
+    text-align: center;
+    background-color:rgb(193, 176, 230);
+    padding: 10px 0px;
+   }
+   #about_image > #images>span:hover{
+    background-color: aqua;
+   }
+
+   #contactdetails > input{
+    display: block;
+    width: 100%;
+    padding: 5px 0px;
+    margin-top: 20px ;
+    margin-bottom: 10px;
+    line-height: 1.2rem;
+   }
+   #contactdetails>span{
+    background-color:#0e0e0f;
+    color: white;
+    padding: 5px 7px;
+   }
+   #map{
+    width: 100%;
+    padding: 5px 1px;
+   }
+   #map>img{
+    margin-top: 20px;
+    width: 100%;
+   }
+   #footer{
+    padding: 5px 10px;
+    background-color: #0e0e0f;
+    text-align: center;
+    color: white;
+}
+/* #pos{
+    display: block;
+    position:relative;
+    bottom: 145rem;
+    left:28rem;
+    font-size: 35px;
+} */
+}
+/* @media (min-width:1024px){
+ 
+    #navbar{
+     width: 100%;
+     position: fixed;
+     top: 0;
+     display:flex;
+     justify-content: space-around;
+     margin: 0;
+     padding: 0;
+ 
+    }
+    #navbarlinks {
+     display: flex;
+  align-items: center;
+     gap:30px ;
+     font-size: 22px;
+    }
+    #navbarlinks > a{
+     text-decoration: none;
+    }
+    #banner{
+        width: 100%;
+    }
+    #banner > img{
+        width: 100%;
+    }
+    #banner > h4{
+        font-size: 20px;
+    }
+    #houses{
+     display: grid;
+     grid-template-columns: repeat(4,1fr);
+     gap: 20px;
+    }
+    #houses > #house{
+     width: 100%;
+     position: relative;
+    }
+    #house > img{
+     width: 100%;
+     border-radius: 5px;
+    }
+    #house > span{
+     position: absolute;
+     left: 0;
+     top:0;
+     background-color: black;
+     color: white;
+     padding: 2px 10px;
+     border-radius: 5px;
+    }
+ 
+ } */

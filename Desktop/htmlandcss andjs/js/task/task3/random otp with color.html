@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #randomColor {
+            padding:15px 20px;
+            margin-top: 10px;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <button id="randomColor">click here random change the color</button>
+    </center>
+    <script>
+        //     let btn=document.getElementById("randomColor")
+        //     btn.addEventListener("click",()=>{
+        //         const hexColor="abcdef0123456789"
+        //         console.log(hexColor.length,"len");
+        //         let hex_color="#"
+        //         for(let i=0;i<6;i++){
+        //         const indexNum=Math.floor(Math.random()*hexColor.length);
+        //         console.log(indexNum);
+        //         hex_color+=hexColor[indexNum];
+        //     } 
+        //     console.log(hexColor)
+        //     document.body.style.backgroundColor=hex_color;
+        //  })
+        let btn = document.getElementById("randomColor")
+        btn.addEventListener("click", () => {
+            randomClrGenerator()
+        });
+        function randomClrGenerator() {
+            const hexColor = "abcdef0123456789"
+            console.log(hexColor.length, "len");
+            let hex_color = "#"
+            for (let i = 0; i < 6; i++) {
+                const indexNum = Math.floor(Math.random() * hexColor.length);
+                console.log(indexNum);
+                hex_color += hexColor[indexNum];
+            }
+            console.log(hexColor)
+            document.body.style.backgroundColor = hex_color;
+        }
+
+    </script>
+
+</body>
+
+</html>

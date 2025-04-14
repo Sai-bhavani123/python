@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>register</title>
+</head>
+<body>
+    
+ 
+        <center><h1>register.html </h1>
+            <form method="get" action="./Register success.html"required>
+    <label for="username"></label>
+    <input type="text" id="username" name="username" pattern="[a-z]+" title="please the small letter"placeholder="username" required><br><br>
+    <label for="email"></label>
+    <input type="email" id="email" name="email"pattern="[xyz][@][gmail.com][XYZ123][@][outlook.com][xyz.123][@][yahoo.com]"title="please enter xyz@gmail.com (or) XYZ@outlook.com (or) xyz.123@yahoo.com"placeholder="email" ><br><br>
+    <label for="password"></label>
+    <input type="password" id="password" name="password"  pattern=(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,16}  title="please enter the 1 small 1cap 1number 1 special char" placeholder="password" required><br><br>
+  <button>register</button></form>
+   <br><br>
+   <a href="./login.html"required>login page</a>
+    
+    <center>
+</body>
+</html>

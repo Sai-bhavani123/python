@@ -1,0 +1,79 @@
+
+#img-1 >img{
+    width:400px;
+    height: 300px;
+    position: relative;
+    top:50px;
+    border-radius: 20px;
+    margin: 0;
+    left:300px;
+    z-index: -1;
+
+}
+#img-2 > img{
+    width:400px;
+    height: 300px;
+    position: relative;
+    left:50px;
+    border-radius: 20px;
+    margin: 0;
+    bottom: 35px;
+    z-index: 1;
+
+}
+#img-text{
+    position: relative;
+}
+#image-text{
+    position: relative;
+width: 500px;
+height: 350px;
+border-radius: 30px;
+padding: 5px 10px;
+box-shadow: 1px 1px 3px rgb(0,0,0.4);
+left: 42rem;
+bottom:30rem;
+
+z-index:2;
+}
+h3{
+    font-size: 20px;
+    text-align: center;
+}
+h1{
+    text-align: center;
+}
+p{
+    font-size: 19px;
+
+}
+ul > li{
+    font-size: 17px;
+    line-height: 25px;
+}
+li::marker{
+    color: hsl(348, 92%, 48%);
+}
+
+#img-2 >img{
+    width:400px;
+    height: 300px;
+    position: relative;
+    top:50px;
+    border-radius: 20px;
+    margin: 0;
+    left:300px;
+    z-index: -1;
+
+}
+#img-3> img{
+    width:400px;
+    height: 300px;
+    position: relative;
+    left: 500px;
+    border-radius: 20px;
+    margin: 0;
+    bottom: 35px;
+    z-index: 1;
+
+}

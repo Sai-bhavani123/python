@@ -1,0 +1,27 @@
+h1{
+    background-color: rgb(240,200,100);
+    border-radius: 20px;
+    font-size: 30px;
+}
+
+#sai1{
+    background-color: #c0c04f;
+    font-size: 30px;
+    font-weight: 200;
+    font-style:italic;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.sai{
+    background-color: #24b424;
+    text-align: "center";
+    text-decoration: underline;
+    text-decoration-color: #c0c0cf;
+    text-transform: lowercase;
+    text-shadow: 4px;
+    text-decoration-thickness: 20px;
+}
+.bhavani{
+box-shadow: 2px 2px 4px #0d3521;
+color:rgb(239, 25, 25);
+}

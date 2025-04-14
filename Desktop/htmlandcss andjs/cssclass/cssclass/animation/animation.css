@@ -1,0 +1,114 @@
+
+body{
+    background: linear-gradient(to top black,blue orange);
+}
+h1{
+    width: 200px;
+    height: 200px;
+    background-color: aqua;
+    border-radius: 40%;
+    margin: 0;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-name:rotate;
+
+}
+@keyframes rotate{
+    0%{
+        transform:rotate(140deg);
+        background-color: black;
+    }
+    50%{
+        transform:rotate(240deg);
+        background-color: blueviolet;
+    }
+    75%{
+        transform:rotate(340deg);
+        background-color: cadetblue;
+    }
+}
+
+h2{
+    margin-left: 60rem;
+    width: 200px;
+    height: 200px;
+    background-color: aqua;
+    border-radius: 40%;
+    border: 2px solid black;
+    margin: 0;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-name:spinner ;
+
+}
+@keyframes spinner{
+    0%{
+        transform:rotate(0deg);
+        background-color:skyblue;
+        border-top: 2px solid cyan;
+    }
+    50%{
+        transform:rotate(200deg);
+        background-color: blueviolet;
+        border-left: 2px solid skyblue;
+
+    }
+    75%{
+        transform:rotate(280deg);
+        background-color: violet;
+        border-left: 2px solid blue;
+    }
+    100%{
+        transform:rotate(20deg);
+        background-color: cadetblue;
+        border-bottom: 2px solid brown;
+    }
+}
+
+
+h3{
+
+    width: 200px;
+    height: 200px;
+    background-color: aqua;
+    border-radius: 40%;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-name:rolling ;
+    animation-direction:normal;
+    animation: rolling 1s linear 2s infinite;
+}
+@keyframes rolling{
+    0%{
+        transform:translate x(300px) rotate(0deg);
+        background-color:skyblue;
+        border-top: 2px solid cyan;
+    }
+    50%{
+        transform:translate y(600px) rotate(200deg);
+ 
+        background-color: blueviolet;
+        border-left: 2px solid skyblue;
+
+    }
+    75%{
+        transform:translate y(500px) rotate(320deg);
+
+        background-color: violet;
+        border-left: 2px solid blue;
+    }
+    100%{
+        transform:translate x(700px) rotate(190deg);
+      
+        background-color: cadetblue;
+        border-bottom: 2px solid brown;
+    }
+
+
+}

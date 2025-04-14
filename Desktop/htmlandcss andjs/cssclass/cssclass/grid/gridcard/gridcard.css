@@ -1,0 +1,26 @@
+#card{
+    column-gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+}
+#card >#card-image{
+    width:100%;
+    border: 2px solid black;
+border-radius: 20px;
+
+}
+#card >#card-image >img{
+    width: 100%;
+    border-radius: 30px;
+ 
+}
+#card-image > #butns{
+text-align: center;
+    border-radius: 10px;
+}
+#card-image > #butns :hover{
+    color: rgb(242, 116, 116);
+}
+#card-image>p{
+    text-align: center;
+}

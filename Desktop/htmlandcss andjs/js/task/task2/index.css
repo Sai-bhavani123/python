@@ -1,0 +1,11 @@
+
+.color-btn {
+  padding: 15px 25px;
+  margin: 5px;
+  border: none;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}

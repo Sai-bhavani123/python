@@ -1,0 +1,54 @@
+
+#navbar1{
+    display:flex;
+    flex-direction: row;
+    position: relative;
+    left: 10rem;
+}
+
+#button1 > a{
+    position: relative;
+    left:42em;
+    top: 20px;
+    text-decoration: none;
+}
+#button2> a{
+    position: relative;
+    left:44em;
+    top: 20px;
+    text-decoration: none;
+
+}
+#navbar2{
+    display:flex;
+    flex-direction: row;
+    position: relative;
+    left: 9rem;
+}
+#navbar2 > #food{
+    position: relative;
+    top: 2rem;
+    left:6rem
+}
+#navbar2> #navbar-text{
+    position: relative;
+    
+}
+#navbar2 > #navbar1-text{
+    position: relative;
+    top: 1rem;
+    left:6rem
+}
+#navbar-image{
+    position: relative;
+    left: 70rem;
+    bottom: 4rem;
+ }
+ #navbar-image > #img1{
+    position: relative;
+    right: 14rem;
+ }
+#navbar-image > #img3{
+    position: relative;
+    left:4rem;
+ }

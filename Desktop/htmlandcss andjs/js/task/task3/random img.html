@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 40px 20px;
+            color: white;
+        }
+
+        #btncolor {
+            padding: 12px 20px;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.2);
+            font-size: 20px;
+            color: white;
+            border: 2px solid white;
+            cursor: pointer;
+            backdrop-filter: blur(6px);
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        #btncolor:hover {
+            background-color: rgba(255, 255, 255, 0.4);
+            transform: scale(1.05);
+        }
+
+        #imgContainer {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        img {
+            width: 500px;
+            max-width: 90%;
+            height: auto;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        img:hover {
+            transform: scale(1.03);
+            box-shadow: 0 14px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        /*         
+        #btncolor {
+            padding: 10px 15px;
+            border-radius: 10px;
+            background-color: rgb(205, 192, 255);
+            font-size: 20px;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        #imgContainer {
+            margin-top: 20px;
+            text-align: center;
+        }
+        
+        img {
+            width: 500px;
+            max-width: 90%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        img:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        } */
+    </style>
+</head>
+
+<body>
+    <center>
+        <button id="btncolor">random img</button>
+    </center>
+    <div id="imgContainer"></div>
+    <script>
+        const image = ["https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bmF0dXJlfGVufDB8fDB8fHww",
+            "https://images.unsplash.com/photo-1472396961693-142e6e269027?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8bmF0dXJlfGVufDB8fDB8fHww",
+            "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fG5hdHVyZXxlbnwwfHwwfHx8MA%3D%3D",
+            "https://media.istockphoto.com/id/1696167872/photo/aerial-view-of-forest-at-sunset-on-the-background-of-mountains-in-dolomites.webp?a=1&b=1&s=612x612&w=0&k=20&c=XpgBalIWrljWuN8f_SL-GzueON4ecBeCfoJGOIsunDw=",
+            "https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fG5hdHVyZXxlbnwwfHwwfHx8MA%3D%3D",
+            "https://media.istockphoto.com/id/2067454077/photo/spring-background.webp?a=1&b=1&s=612x612&w=0&k=20&c=AFDu24cf4aqKBssfw5l8G4KfavcwU1R7PClJsv7sNe8=",
+            "https://media.istockphoto.com/id/2151080478/photo/aerial-view-of-bridge-asphalt-road-with-cars-and-blue-water-lake-and-green-woods.jpg?s=2048x2048&w=is&k=20&c=sKZ9JsD-6bCiYDghfk8NiHeNk0h80zAtgANNQF9Qe_k="]
+        const gradients = [
+            "linear-gradient(135deg, #ff9a9e, #fad0c4)",
+            "linear-gradient(135deg, #a18cd1, #fbc2eb)",
+            "linear-gradient(135deg, #fbc2eb, #a6c1ee)",
+            "linear-gradient(135deg, #667eea, #764ba2)",
+            "linear-gradient(135deg, #43cea2, #185a9d)",
+            "linear-gradient(135deg, #ffecd2, #fcb69f)",
+            "linear-gradient(135deg, #89f7fe, #66a6ff)",
+            "linear-gradient(135deg, #f6d365, #fda085)"
+        ];
+        const btn = document.querySelector("button")
+        const imgColor = document.getElementById("imgContainer")
+        btn.addEventListener("click", () => {
+            const gradientIndex = Math.floor(Math.random() * gradients.length);
+            document.body.style.background = gradients[gradientIndex];
+            imgContainer.innerHTML = " "
+            const imagIndex = Math.floor(Math.random() * image.length)
+            let imgTag = document.createElement("img");
+            imgTag.setAttribute("src", image[imagIndex])
+            imgContainer.appendChild(imgTag)
+        })
+    </script>
+</body>
+
+<!-- </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<!-- <center>
+    <button id="btncolor">random img</button>
+</center>
+<div id="imgContainer"></div>
+<script>
+    const image = ["https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bmF0dXJlfGVufDB8fDB8fHww",
+        "https://images.unsplash.com/photo-1472396961693-142e6e269027?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8bmF0dXJlfGVufDB8fDB8fHww",
+        "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fG5hdHVyZXxlbnwwfHwwfHx8MA%3D%3D",
+        "https://media.istockphoto.com/id/1696167872/photo/aerial-view-of-forest-at-sunset-on-the-background-of-mountains-in-dolomites.webp?a=1&b=1&s=612x612&w=0&k=20&c=XpgBalIWrljWuN8f_SL-GzueON4ecBeCfoJGOIsunDw=",
+        "https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fG5hdHVyZXxlbnwwfHwwfHx8MA%3D%3D",
+        "https://media.istockphoto.com/id/2067454077/photo/spring-background.webp?a=1&b=1&s=612x612&w=0&k=20&c=AFDu24cf4aqKBssfw5l8G4KfavcwU1R7PClJsv7sNe8=",
+        "https://media.istockphoto.com/id/2151080478/photo/aerial-view-of-bridge-asphalt-road-with-cars-and-blue-water-lake-and-green-woods.jpg?s=2048x2048&w=is&k=20&c=sKZ9JsD-6bCiYDghfk8NiHeNk0h80zAtgANNQF9Qe_k="]
+    const gradients = [
+        "linear-gradient(135deg, #ff9a9e, #fad0c4)",
+        "linear-gradient(135deg, #a18cd1, #fbc2eb)",
+        "linear-gradient(135deg, #fbc2eb, #a6c1ee)",
+        "linear-gradient(135deg, #667eea, #764ba2)",
+        "linear-gradient(135deg, #43cea2, #185a9d)",
+        "linear-gradient(135deg, #ffecd2, #fcb69f)",
+        "linear-gradient(135deg, #89f7fe, #66a6ff)",
+        "linear-gradient(135deg, #f6d365, #fda085)"
+    ];
+    const btn = document.querySelector("button")
+    const imgColor = document.getElementById("imgContainer")
+    btn.addEventListener("click", () => {
+        const gradientIndex = Math.floor(Math.random() * gradients.length);
+        document.body.style.background = gradients[gradientIndex];
+        imgContainer.innerHTML = " "
+        const imagIndex = Math.floor(Math.random() * image.length)
+        let imgTag = document.createElement("img");
+        imgTag.setAttribute("src", image[imagIndex])
+        imgContainer.appendChild(imgTag)
+    })
+</script>
+</body>
+
+</html> --> -->
